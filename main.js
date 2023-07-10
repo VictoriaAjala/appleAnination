@@ -39,3 +39,25 @@ const preloadImages = () => {
 };
 
 preloadImages();
+
+var modal = document.getElementById('myModal');
+
+var closeBtn = document.getElementsByClassName('close')[0];
+
+window.onload = function() {
+    modal.style.display = 'block';
+
+    setTimeout(function() {
+        modal.style.display = 'none';
+    }, 5000);
+};
+
+closeBtn.onclick = function() {
+    modal.style.display = 'none';
+};
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+};
